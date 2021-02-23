@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Tweet.create({
+#   title: "Just found this",
+#   content: "the square of the hypotenuse is equal to the sum of the squares of the other two sides",
+#   author: "Pythagoras570"
+# })
+
+# Tweet.create({
+#   title: "I'm walkin' here",
+#   content: "Hey, I'm walkin' here!",
+#   author: "Nicky62"
+# })
+
+10.times do
+    tweet = Tweet.create(
+        title: Faker::Games::Touhou.spell_card,
+        content: Faker::GreekPhilosophers.quote,
+        author: Faker::FunnyName.name
+    )
+end
